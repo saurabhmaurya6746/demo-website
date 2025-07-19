@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Extra-curricular::Ram Lakhan Bhatt International School {% endblock %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+{% block body %}
+<!-- Your page-specific content here -->
+<section class="page-banner d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-5 fw-bold">Extra-Curricular</h1>
+    <p class="breadcrumb-text">Home / Extra-Curricular</p>
+  </div>
+</section>
+
+
+ <!-- Extra-Curricular Activities Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">Extra-Curricular <span class="text-dark">Activities</span></h2>
+      <p class="text-muted">We encourage holistic development through diverse student activities and clubs.</p>
+      <hr class="mx-auto border-danger" style="width: 100px;">
+    </div>
+
+    <div class="row g-4">
+      <!-- NSS -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm bg-white">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-people-fill me-2"></i>National Service Scheme (NSS)</h5>
+            <p class="card-text">
+              Students participate in social activities like cleanliness drives, blood donation camps, and community services under NSS.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sports -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm bg-white">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-trophy-fill me-2"></i>Sports & Athletics</h5>
+            <p class="card-text">
+              Regular inter-college and inter-departmental competitions are organized in cricket, kabaddi, volleyball, chess, etc.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cultural Programs -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm bg-white">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-mic-fill me-2"></i>Cultural Activities</h5>
+            <p class="card-text">
+              Annual cultural fest includes dance, singing, drama, rangoli, debates, and celebrations of national events.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clubs (Optional Extra) -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm bg-white">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-lightning-fill me-2"></i>Student Clubs</h5>
+            <p class="card-text">
+              Literary club, nature club, and entrepreneurship cell are student-led groups for skills beyond academics.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yoga and Health -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm bg-white">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-heart-pulse-fill me-2"></i>Yoga & Wellness</h5>
+            <p class="card-text">
+              Regular yoga and wellness workshops are held to promote physical and mental well-being among students.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Environment Awareness -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm bg-white">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-tree-fill me-2"></i>Eco-Club & Clean Campus</h5>
+            <p class="card-text">
+              The college runs various campaigns for a clean and green campus, plastic-free zone, and tree plantation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

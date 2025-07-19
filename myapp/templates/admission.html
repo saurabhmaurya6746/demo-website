@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Admission::Ram Lakhan Bhatt International School {% endblock %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+{% block body %}
+<!-- Your page-specific content here -->
+<section class="page-banner d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-5 fw-bold">Admission</h1>
+    <p class="breadcrumb-text">Home / Admission</p>
+  </div>
+</section>
+
+ <div class="container py-5">
+    
+    <!-- Heading -->
+    <h2 class="text-center section-heading mb-4">
+      <span class="text-danger">ADMISSION</span> PROCEDURE
+          <hr class="mx-auto mt-2" style="width: 100px; height: 3px; background-color: green; opacity: 0.7;">
+
+    </h2>
+
+    <div class="row align-items-center">
+      
+      <!-- Left Content -->
+      <div class="col-lg-8">
+        <p>
+          {{ school_name }} provides education from Nursery to Class 12 for both boys and girls, offering a strong foundation in academic and co-curricular development. All parents and guardians seeking admission for their children are advised to go through the School Prospectus carefully, which contains important information regarding eligibility, fee structure, and curriculum details.
+        </p>
+        <p class="fw-bold">
+          Admissions will be granted strictly on the basis of merit and availability of seats, following the guidelines set by the school management and educational authorities. Once the seats are filled, no further admissions will be entertained.
+        </p>
+      </div>
+      
+
+      <!-- Right Image -->
+      <div class="col-lg-4">
+        <div class="shadow-box">
+          <img src="{% static 'img/a2.jpg' %}" alt="Admission" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <!-- Subheading -->
+    <div class="mt-5">
+      <h5 class="icon-title">
+        <i class="fas fa-circle text-danger me-2"></i>ADMISSION PROCEDURE
+      </h5>
+      <hr class="procedure-heading">
+    </div>
+
+    <!-- Bullet List -->
+    <ul class="list-unstyled">
+      <li><i class="fas fa-check check-icon"></i>Admission requests (for Class 11 Arts & Science) will not be accepted without a properly filled admission form.</li>
+      <li><i class="fas fa-check check-icon"></i>No personal communication will be made for admission updates. All notices will be displayed on the school notice board.</li>
+      <li><i class="fas fa-check check-icon"></i>Eligible students can collect the admission form from the school office during working hours.</li>
+      <li><i class="fas fa-check check-icon"></i>All important announcements will be put up on the School Notice Board and Website.</li>
+      <li><i class="fas fa-check check-icon"></i>Selected students must attend the admission counselling on the mentioned date, failing which the seat may be allotted to others.</li>
+      <li><i class="fas fa-check check-icon"></i>Seats for OBC, EBC, SC & ST categories are reserved as per Government norms. Valid caste certificates must be submitted.</li>
+      <li><i class="fas fa-check check-icon"></i>Students must select their subject combinations carefully during admission. No changes will be allowed later.</li>
+      <li><i class="fas fa-check check-icon"></i>The original and one set of attested photocopies of the following documents must be submitted at the time of admission:</li>
+    </ul>
+    
+    <!-- Document List -->
+    <ol>
+      <li>Migration certificate from the institution last attended.</li>
+      <li>Mark sheet of the examination passed.</li>
+    </ol>
+
+  </div>
+{% include "include.html" %}
+{% endblock %}

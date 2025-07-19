@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Course::Ram Lakhan Bhatt International School {% endblock %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+{% block body %}
+<!-- Your page-specific content here -->
+<section class="page-banner d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-5 fw-bold">Course</h1>
+    <p class="breadcrumb-text">Home / Course</p>
+  </div>
+</section>
+
+
+<!-- Courses Offered Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">Courses <span class="text-dark">Offered</span></h2>
+      <p class="text-muted">We offer a variety of undergraduate and postgraduate programs across disciplines.</p>
+      <hr class="mx-auto border-danger" style="width: 100px;">
+    </div>
+
+    <div class="row g-4">
+      <!-- UG Courses -->
+      <div class="col-md-6">
+        <div class="p-4 border rounded bg-light shadow-sm h-100">
+          <h4 class="text-danger mb-3"><i class="bi bi-mortarboard-fill me-2"></i>Undergraduate Courses (UG)</h4>
+          <ul class="list-unstyled">
+            <li>• B.A. (Bachelor of Arts)</li>
+            <li>• B.Sc. (Bachelor of Science)</li>
+            <li>• B.Com. (Bachelor of Commerce)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PG Courses -->
+      <div class="col-md-6">
+        <div class="p-4 border rounded bg-light shadow-sm h-100">
+          <h4 class="text-danger mb-3"><i class="bi bi-journal-bookmark-fill me-2"></i>Postgraduate Courses (PG)</h4>
+          <ul class="list-unstyled">
+            <li>• M.A. (Master of Arts)</li>
+            <li>• M.Sc. (Master of Science)</li>
+            <li>• M.Com. (Master of Commerce)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Vocational Courses (Optional) -->
+      <div class="col-md-6">
+        <div class="p-4 border rounded bg-light shadow-sm h-100">
+          <h4 class="text-danger mb-3"><i class="bi bi-tools me-2"></i>Vocational / Skill Courses</h4>
+          <ul class="list-unstyled">
+            <li>• Computer Applications</li>
+            <li>• Environmental Science</li>
+            <li>• Business Communication</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Add-On Courses -->
+      <div class="col-md-6">
+        <div class="p-4 border rounded bg-light shadow-sm h-100">
+          <h4 class="text-danger mb-3"><i class="bi bi-lightbulb-fill me-2"></i>Certificate / Add-on Courses</h4>
+          <ul class="list-unstyled">
+            <li>• Spoken English</li>
+            <li>• Personality Development</li>
+            <li>• Yoga & Wellness</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

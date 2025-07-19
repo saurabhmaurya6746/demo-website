@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Study-materials::Ram Lakhan Bhatt International School {% endblock %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+{% block body %}
+<!-- Your page-specific content here -->
+<section class="page-banner d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-5 fw-bold">About Us</h1>
+    <p class="breadcrumb-text">Home / About Us</p>
+  </div>
+</section>
+ 
+<!-- Study Material Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">Study <span class="text-dark">Materials</span></h2>
+      <p class="text-muted">Download subject-wise notes, question papers and syllabus PDFs for self-study.</p>
+      <hr class="mx-auto border-danger" style="width: 100px;">
+    </div>
+
+    <!-- Table Style Material List -->
+    <div class="table-responsive">
+      <table class="table table-bordered bg-white shadow-sm">
+        <thead class="table-danger text-center">
+          <tr>
+            <th>Subject</th>
+            <th>Semester</th>
+            <th>Material Type</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>English Literature</td>
+            <td>Semester I</td>
+            <td>Notes (PDF)</td>
+            <td class="text-center">
+              <a href="{% static 'materials/english_notes.pdf' %}" class="btn btn-sm btn-danger" download>
+                <i class="bi bi-download"></i> Download
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>Physics</td>
+            <td>Semester II</td>
+            <td>Previous Year Paper</td>
+            <td class="text-center">
+              <a href="{% static 'materials/physics_paper.pdf' %}" class="btn btn-sm btn-danger" download>
+                <i class="bi bi-download"></i> Download
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>Economics</td>
+            <td>Semester III</td>
+            <td>Syllabus</td>
+            <td class="text-center">
+              <a href="{% static 'materials/economics_syllabus.pdf' %}" class="btn btn-sm btn-danger" download>
+                <i class="bi bi-download"></i> Download
+              </a>
+            </td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+{% include "include.html" %}
+{% endblock %}

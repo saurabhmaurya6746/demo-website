@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact::Ram Lakhan Bhatt International School {% endblock %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+{% block body %}
+<!-- Your page-specific content here -->
+<section class="page-banner d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-5 fw-bold">Contact Us</h1>
+    <p class="breadcrumb-text">Home / Contact Us</p>
+  </div>
+</section>
+
+
+ <!-- Contact Page Content Start -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">Contact <span class="text-dark">Us</span></h2>
+      <p class="text-muted">We’d love to hear from you! Reach out to us using the form or information below.</p>
+      <hr class="mx-auto border-danger" style="width: 100px;">
+    </div>
+
+    <!-- Row: Contact Info + Form -->
+    <div class="row">
+      <!-- Contact Info -->
+      <div class="col-md-5 mb-4">
+        <h5 class="text-dark mb-3"><i class="bi bi-geo-alt-fill text-danger me-2"></i> Address</h5>
+        <p>{{school_name}}<br>
+        Pin Code: 210208<br>
+        District: Lakhisarai, Uttar Pradesh</p>
+
+        <h5 class="text-dark mt-4 mb-3"><i class="bi bi-telephone-fill text-danger me-2"></i> Phone</h5>
+        <p><a href="tel:+91 {{Mobile_number}}" class="text-decoration-none text-dark">+91 {{Mobile_number}}</a></p>
+
+        <h5 class="text-dark mt-4 mb-3"><i class="bi bi-envelope-fill text-danger me-2"></i> Email</h5>
+        <p><a href="mailto:saurabhmauryajnp28@gmail.com" class="text-decoration-none text-dark">saurabhmauryajnp28@gmail.com</a></p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-7">
+        <form method="POST" action="#">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger px-4">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Page Content End -->
+
+{% endblock %}

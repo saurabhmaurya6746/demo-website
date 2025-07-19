@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Department::Ram Lakhan Bhatt International School {% endblock %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+{% block body %}
+<!-- Your page-specific content here -->
+<section class="page-banner d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-5 fw-bold">Department</h1>
+    <p class="breadcrumb-text">Home / Department</p>
+  </div>
+</section>
+
+
+<!-- Departments & Courses Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">Departments & <span class="text-dark">Courses</span></h2>
+      <p class="text-muted">Explore the academic departments and their major offerings.</p>
+      <hr class="mx-auto border-danger" style="width: 100px;">
+    </div>
+
+    <div class="row g-4">
+      <!-- Department 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-book-fill me-2"></i>Department of Arts</h5>
+            <ul class="list-unstyled mt-3">
+              <li>• Hindi</li>
+              <li>• English</li>
+              <li>• History</li>
+              <li>• Political Science</li>
+              <li>• Philosophy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Department 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-flask-fill me-2"></i>Department of Science</h5>
+            <ul class="list-unstyled mt-3">
+              <li>• Physics</li>
+              <li>• Chemistry</li>
+              <li>• Mathematics</li>
+              <li>• Zoology</li>
+              <li>• Botany</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Department 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-cash-coin me-2"></i>Department of Commerce</h5>
+            <ul class="list-unstyled mt-3">
+              <li>• Accountancy</li>
+              <li>• Business Studies</li>
+              <li>• Economics</li>
+              <li>• Financial Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ 
+{% endblock %}

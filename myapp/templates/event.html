@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Event::Ram Lakhan Bhatt International School {% endblock %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+{% block body %}
+<!-- Your page-specific content here -->
+<section class="page-banner d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-5 fw-bold">About Us</h1>
+    <p class="breadcrumb-text">Home / About Us</p>
+  </div>
+</section>
+<!-- Events & Announcements Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">College <span class="text-dark">Events</span></h2>
+      <p class="text-muted">Stay updated with our latest programs, seminars, and cultural functions.</p>
+      <hr class="mx-auto border-danger" style="width: 100px;">
+    </div>
+
+    <div class="row g-4">
+      <!-- Event Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-calendar-event me-2"></i> Annual Cultural Fest</h5>
+            <p class="text-muted mb-1"><i class="bi bi-clock me-2"></i> 15th August 2024</p>
+            <p class="card-text">Join us for a colorful celebration of talent, tradition, and culture with music, dance, and drama performances.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-calendar-event me-2"></i> Science Exhibition</h5>
+            <p class="text-muted mb-1"><i class="bi bi-clock me-2"></i> 22nd September 2024</p>
+            <p class="card-text">Departments of Science present working models and research projects prepared by students.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><i class="bi bi-calendar-event me-2"></i> Seminar on NEP 2020</h5>
+            <p class="text-muted mb-1"><i class="bi bi-clock me-2"></i> 5th October 2024</p>
+            <p class="card-text">Experts and academicians discuss the key reforms and impact of the National Education Policy 2020.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more events as needed -->
+    </div>
+  </div>
+</section>
+
+{% endblock %}

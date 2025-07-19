@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Gallery::Ram Lakhan Bhatt International School {% endblock %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock %}
+{% block body %}
+<!-- Your page-specific content here -->
+<section class="page-banner d-flex align-items-center justify-content-center text-center text-white">
+  <div>
+    <h1 class="display-5 fw-bold">Gallery</h1>
+    <p class="breadcrumb-text">Home / Gallery</p>
+  </div>
+</section>
+
+ <!--  Gallery Section -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">
+      <span class="text-danger">PHOTO</span> <span class="text-dark">GALLERY</span>
+    </h2>
+  <hr class="mx-auto" style="width: 120px; height: 3px; background-color: green; opacity: 0.7;">
+
+    <div class="row mt-5 g-4">
+      <!-- Card 1 -->
+<div class="col-md-4">
+        <div class="card gallery-card shadow">
+          <img src="{% static 'img/event.png' %}" class="card-img-top" alt="Gallery 1">
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card gallery-card shadow">
+          <img src="{% static 'img/event2.png' %}" class="card-img-top" alt="Gallery 2">
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card gallery-card shadow">
+          <img src="{% static 'img/event.png' %}" class="card-img-top" alt="Gallery 3">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card gallery-card shadow">
+          <img src="{% static 'img/event.png' %}" class="card-img-top" alt="Gallery 1">
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card gallery-card shadow">
+          <img src="{% static 'img/event2.png' %}" class="card-img-top" alt="Gallery 2">
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card gallery-card shadow">
+          <img src="{% static 'img/event.png' %}" class="card-img-top" alt="Gallery 3">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
