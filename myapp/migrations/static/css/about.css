@@ -1,0 +1,28 @@
+.page-banner {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('/static/img/9.jpg') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.breadcrumb-text {
+  font-size: 16px;
+  color: #f1f1f1;
+  font-style: italic;
+}
+
+.about-establishment p {
+  text-align: justify;
+  line-height: 1.8;
+}
+.about-establishment {
+  background-color: #fff;
+  color: black !important;
+}
