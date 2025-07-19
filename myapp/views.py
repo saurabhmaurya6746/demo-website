@@ -4,10 +4,10 @@ from django.shortcuts import render, redirect
 from .models import ContactMessage
 from django.contrib import messages
 
-SCHOOL_NAME = "Ram Lakhan Bhatt International School"
-Mobile_number="09198121002"
-address='Bhausingh, Main Highway (NH2), Near Panki Padav, Near A2Z Infrastructure, Panki, Kanpur'
-map_embed_code ='''<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114313.36407165151!2d80.13445589726561!3d26.44629480000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c49d62e1f3fb7%3A0xe7100a5ff6f13f37!2sRam%20Lakhan%20Bhatt%20International%20School!5e0!3m2!1sen!2sin!4v1752830406416!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'''
+SCHOOL_NAME = "Children Growth Public School"
+Mobile_number="09839086105"
+address='Moti Nagar, Gujju Purwa, Jajmau, Kanpur, Uttar Pradesh 208010'
+map_embed_code ='''<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3572.623273091606!2d80.393295!3d26.4356312!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c41d96700341d%3A0xef5325533db51d3e!2sChildren%20Growth%20Public%20School-%20Best%20Pre%20School!5e0!3m2!1sen!2sin!4v1752945945459!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'''
 
 hindi_name ='राम लखन भट्ट इंटरनेशनल स्कूल'
 
