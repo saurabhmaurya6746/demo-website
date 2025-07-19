@@ -1,0 +1,264 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% block title %}Ram Lakhan Bhatt International School {% endblock %}
+    </title>
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block link %} {% endblock %}
+</head>
+  <body>
+<!-- top header  -->
+<!-- Top Info Header with Updated Theme -->
+<div class="container-fluid" style="background-color: #1b002a; color: #eee;">
+  <!-- Desktop Version -->
+  <div class="row gx-0 d-none d-lg-flex top-info">
+    <!-- Left: Location & Timing -->
+    <div class="col-lg-8 px-5 text-start">
+      <div class="h-100 d-inline-flex align-items-center me-4">
+        <small class="fa fa-map-marker-alt text-warning me-2"></small>
+        <small>
+          <a href="https://maps.app.goo.gl/MDE71ty8wMPPDULR7" class="text-decoration-none text-light">
+             {{ address}}
+          </a>
+        </small>
+      </div>
+      <div class="h-100 d-inline-flex align-items-center">
+        <small class="far fa-clock text-warning me-2"></small>
+        <small>Mon - Sat : 09.00 AM - 03.00 PM</small>
+      </div>
+    </div>
+
+    <!-- Right: Phone & Social Icons -->
+    <div class="col-lg-4 px-5 text-end">
+      <div class="h-100 d-inline-flex align-items-center me-4">
+        <small class="fa fa-phone-alt text-warning me-2"></small>
+        <small>
+          <a href="tel:+91{{ Mobile_number }}" class="text-decoration-none text-light">
+          {{ Mobile_number }}
+        </a>
+
+        </small>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="h-100 d-inline-flex align-items-center mx-n2">
+        <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-light" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-light" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary text-light" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-square btn-link rounded-0 text-light" href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Version -->
+  <div class="d-block d-lg-none text-center py-2">
+    <small><i class="fa fa-phone-alt text-warning me-2"></i>
+    <a href="tel:+91{{ Mobile_number }}" class="text-decoration-none text-light">
+      {{ Mobile_number }}
+    </a>
+      </small>
+  </div>
+</div>
+ 
+<!-- Main Header Start -->
+<div class="container-fluid py-3 border-bottom border-secondary" style="background-color: #fdfbff;">
+  <div class="row gy-3 align-items-center">
+
+    <!-- Left: Logo + College Name -->
+    <div class="col-12 col-md-9">
+      <div class="d-flex flex-column flex-sm-row align-items-center gap-3">
+        <img src="{% static 'img/logo.png' %}" alt="Munger University Logo" class="college-logo">
+        <div class="college-name text-center text-sm-start">
+          <h4>{{school_name}}</h4>
+          <h5>{{hindi_name}}</h5>
+          <small>(A Constituent Unit of Patliputra University, Kanpur)</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Automation Button -->
+    <div class="col-12 col-md-3 text-center text-md-end">
+      <a href="{% url 'contact' %}" class="btn automation-btn w-100 w-md-auto">
+        <i class="fas fa-cog me-2"></i> Admission Open 2025-26
+      </a>
+    </div>
+
+  </div>
+</div>
+<!-- Main Header End -->
+
+<!--  Enquiry Button - Left Side -->
+<a href="{% url 'admission' %}" class="fixed-button-rotated left-button blink bg-primary text-white">
+  <i class="bi bi-telephone-fill"></i> Enquiry
+</a>
+
+<!--  Admission Button - Right Side -->
+<a href="{% url 'contact' %}" class="fixed-button-rotated right-button blink bg-success text-white" title="Admission">
+  <i class="bi bi-file-earmark-text-fill"></i> Admission
+</a>
+
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endfor %}
+{% endif %}
+
+
+<!-- navbar start  -->
+<nav class="navbar navbar-expand-lg navbar-dark w-100  sticky-top mt-4">
+  <div class="container-fluid">
+<a class="navbar-brand fw-bold" href="{% url 'home' %}">
+  <span style="color: #f1c40f;">Ram Lakhan Bhatt </span> 
+  International School
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+
+        <!-- About -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'about' %}">About</a></li>
+            <li><a class="dropdown-item" href="{% url 'mission-vission' %}">Vision & Mission</a></li>
+            
+          </ul>
+        </li>
+
+        <!-- Principal -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Principal</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'principal' %}">Message</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+          </ul>
+        </li>
+
+        <!-- Academics -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Academics</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'department' %}">Departments</a></li>
+            <li><a class="dropdown-item" href="{% url 'course' %}">Courses</a></li>
+          </ul>
+        </li>
+        <!-- Media -->
+        <li class="nav-item dropdown">
+          <a class="nav-link " href="{% url 'gallery' %}" >Gallery</a>
+           
+        </li>
+
+        <!-- Static Links -->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'study-materials' %}">Study Materials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'admission' %}">Admission</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'event' %}">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+{% block body %}
+{% endblock %}
+
+
+<!--  Footer Section -->
+<!--  Footer Section -->
+ <footer class="site-footer bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <!-- Address -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-heading">Address</h5>
+        <p class="mb-1">{{ school_name }}</p>
+        <p class="mb-1">Pin Code: 210208</p>
+        <p class="mb-1">District: Kanpur</p>
+        <p class="mb-1">State: UP</p>
+      </div>
+
+      <!-- Important Links -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-heading">Important Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'mission-vission' %}">Vision & Mission</a></li>
+          <li><a href="{% url 'principal' %}">Principal's Message</a></li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a href="{% url 'admission' %}">Admission</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact / Social -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-heading">Follow Us</h5>
+        <p class="mb-1"><i class="bi bi-telephone-fill me-2 text-warning"></i> +91 {{Mobile_number}}</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-2 text-warning"></i> gvcpatna@gmail.com</p>
+        <div class="mt-3 footer-socials">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+
+      <!-- Map Embed -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-heading mb-3">Our Location</h5>
+        <div class="ratio ratio-4x3 rounded shadow-sm border border-light">
+          <iframe
+            src="https://maps.google.com/maps?q=Delhi%20Public%20School%20Patna&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            title="Ganga Valley College Location Map"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            style="border:0;">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-light">
+    <p class="text-center mb-0">© {{ year }} {{ school_name }} | Designed by 
+      <a href="https://saurabhmaurya6746.github.io/Portfolio" class="text-decoration-none text-primary" target="_blank">Saurabh Maurya</a>
+    </p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
