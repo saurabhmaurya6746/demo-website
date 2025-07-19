@@ -1,0 +1,23 @@
+.section-heading {
+      color: #800000;
+      font-weight: 700;
+    }
+    .procedure-heading {
+      border-bottom: 2px solid #800000;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    .check-icon {
+      color: orange;
+      margin-right: 8px;
+    }
+    .icon-title {
+      color: #800000;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .shadow-box {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
