@@ -108,6 +108,16 @@
   background-color: #d9b3ff; /* light purple toggler */
 }
 
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1rem;
+    max-width: 70%;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+}
 
 /* Hide dropdown initially */
 .dropdown-menu {
