@@ -89,9 +89,10 @@
 
 <!--  Hero Section -->
 <div class="text-center mt-5">
-  <h2 class="fw-bold">
-    <span class="text-danger">WELCOME</span> TO GNAGA VALLEY COLLEGE , PATNA 
-  </h2>
+<h2 class="fw-bold text-capitalize">
+  <span class="text-danger">WELCOME</span> <span>{{ school_name }}</span>
+</h2>
+
   <hr class="mx-auto mt-2" style="width: 120px; height: 3px; background-color: green; opacity: 0.7;">
 </div>
 <!--  College Introduction -->
@@ -187,7 +188,8 @@
 </div>
 
  <!--  Principal Message Section -->
-<section class="py-5 text-white" style="background: linear-gradient(to right, #3a0057, #3e2b86);">
+<section class="py-5 text-white" style="background: linear-gradient(to right, #3a0057, #3e2b86);
+">
   <div class="container">
     <div class="row align-items-center">
 
@@ -202,10 +204,10 @@
           It’s a great honor to serve as the Principal of <strong>{{ school_name }}</strong>, an institution dedicated to nurturing young minds through quality school education. Our mission is to provide a nurturing and disciplined environment where students from all backgrounds, especially from underrepresented areas, can grow academically, socially, and morally.
         </p>
         <p class="mb-3">
-          Every child who becomes a part of this institution is encouraged to aim high, maintain discipline, and strive for excellence in all their endeavors. Education is not just about books and exams, but about becoming a responsible, confident, and compassionate individual. I warmly welcome all students and parents to Ganga Valley College, and invite them to be a part of our journey towards holistic development and academic excellence.
+          Every child who becomes a part of this institution is encouraged to aim high, maintain discipline, and strive for excellence in all their endeavors. Education is not just about books and exams, but about becoming a responsible, confident, and compassionate individual. I warmly welcome all students and parents to {{school_name}}, and invite them to be a part of our journey towards holistic development and academic excellence.
         </p>
         <h5 class="fw-bold mt-4">Shri XYZ Singh</h5>
-        <p class="mb-0">Principal, Ganga Valley College</p>
+        <p class="mb-0">Principal, {{school_name}}</p>
       </div>
     </div>
   </div>
