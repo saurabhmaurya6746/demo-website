@@ -30,7 +30,7 @@ ALLOWED_HOSTS = [
     'school-demo-yonj.onrender.com',
     '127.0.0.1',
     'localhost',
-    'https://school-demo-hoiv.onrender.com/',
+    'school-demo-hoiv.onrender.com',
 ]
 
 
